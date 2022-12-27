@@ -20,22 +20,24 @@
   <body>
     <header class="navbar">
       <div class="navbar__brand">
-        <img class="navbar__logo" src=".././static/logo.svg" alt="Logo" />
-        Microblog
+        <a href="#" class="href__logo"
+          ><img class="navbar__logo" src=".././static/logo.svg" alt="Logo" />
+          Microblog</a
+        >
       </div>
       <ul class="navbar__navigation">
         <li class="navbar__navigation-item">
           <a href="#" class="navbar__link">Recentes</a>
         </li>
         <li class="navbar__navigation-item">
-          <a href="#" class="navbar__link">Celendário</a>
+          <a href="/calendar" class="navbar__link">Celendário</a>
         </li>
       </ul>
     </header>
     <main class="main">
       <section>
         <h1>Adicione uma nova publicação</h1>
-        <form class="form" action="/entry" method="POST">
+        <form class="form" action="/" method="POST">
           <p class="form__input">
             <label class="form__label" for="entry"
               >Adicione uma publicação:</label
@@ -52,23 +54,20 @@
       </section>
       <section>
         <h1>Posts recentes</h1>
+        {% for entry in entries %}
         <article class="entry">
           <div>
-            <h2 class="entry__title">Titulo</h2>
+            <h2 class="entry__title">{{entry[0] | truncate(20, true) }}</h2>
             <img
               src=".././static/calendar-event.svg"
               alt="icon__calendar"
               class="icon__calendar"
             />
-            <time class="entry__date" datetime="27-12-2022">27 Dez</time>
+            <time class="entry__date" datetime="27-12-2022">{{entry[1]}}</time>
           </div>
-          <p class="entry__content">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic libero
-            consectetur eius illum ex, quod excepturi odit veniam corrupti fugit
-            quae nam obcaecati placeat. Obcaecati aliquam excepturi sed ullam.
-            Quam?
-          </p>
+          <p class="entry__content">{{ entry[0] }}</p>
         </article>
+        {% endfor %}
       </section>
     </main>
     <div class="footer-dark">
