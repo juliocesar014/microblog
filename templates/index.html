@@ -1,79 +1,98 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../static/style.css">
-    <link rel="shortcut icon" href="../logo.svg" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../static/style.css" />
+    <link rel="shortcut icon" href=".././static/logo.svg" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css"
+    />
     <title>Microblog</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <header class="navbar">
-        <div class="navbar__brand">
-            <img class="navbar__logo" src="../logo.svg" alt="Logo"> Microblog
-        </div>
-        <ul class="navbar__navigation">
-            <li class="navbar__navigation-item"><a href="#" class="navbar__link">Recentes</a></li>
-            <li class="navbar__navigation-item"><a href="#" class="navbar__link">Celendário</a></li>
-        </ul>
+      <div class="navbar__brand">
+        <img class="navbar__logo" src=".././static/logo.svg" alt="Logo" />
+        Microblog
+      </div>
+      <ul class="navbar__navigation">
+        <li class="navbar__navigation-item">
+          <a href="#" class="navbar__link">Recentes</a>
+        </li>
+        <li class="navbar__navigation-item">
+          <a href="#" class="navbar__link">Celendário</a>
+        </li>
+      </ul>
     </header>
     <main class="main">
-        <section>
-            <h1>Adicione uma nova publicação</h1>
-            <form class="form" action="/entry" method="POST">
-                <p class="form__input">
-                    <label class="form__label" for="entry">Adicione uma publicação:</label>
-                    <textarea class="form__textarea" aria-label="Adiciona publicação" name="content"
-                        id="entry"></textarea>
-                </p>
-                <button class="form__submit" type="submit">Adicionar</button>
-            </form>
-        </section>
-        <section>
-            <h1>Posts recentes</h1>
-            <article class="entry">
-                <div>
-                    <h2 class="entry__title">Titulo</h2>
-                    <img src="../calendar-event.svg" alt="icon__calendar" class="icon__calendar">
-                    <time class="entry__date" datetime="27-12-2022">27 Dez</time>
-                </div>
-                <p class="entry__content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic libero
-                    consectetur eius illum ex, quod
-                    excepturi odit veniam corrupti fugit quae nam obcaecati placeat. Obcaecati aliquam excepturi sed
-                    ullam. Quam?</p>
-            </article>
-
-        </section>
+      <section>
+        <h1>Adicione uma nova publicação</h1>
+        <form class="form" action="/entry" method="POST">
+          <p class="form__input">
+            <label class="form__label" for="entry"
+              >Adicione uma publicação:</label
+            >
+            <textarea
+              class="form__textarea"
+              aria-label="Adiciona publicação"
+              name="content"
+              id="entry"
+            ></textarea>
+          </p>
+          <button class="form__submit" type="submit">Adicionar</button>
+        </form>
+      </section>
+      <section>
+        <h1>Posts recentes</h1>
+        <article class="entry">
+          <div>
+            <h2 class="entry__title">Titulo</h2>
+            <img
+              src=".././static/calendar-event.svg"
+              alt="icon__calendar"
+              class="icon__calendar"
+            />
+            <time class="entry__date" datetime="27-12-2022">27 Dez</time>
+          </div>
+          <p class="entry__content">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic libero
+            consectetur eius illum ex, quod excepturi odit veniam corrupti fugit
+            quae nam obcaecati placeat. Obcaecati aliquam excepturi sed ullam.
+            Quam?
+          </p>
+        </article>
+      </section>
     </main>
     <div class="footer-dark">
-        <footer>
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-6 col-md-3 item">
-                        <h3>Tecnologias Usadas</h3>
-                        <ul>
-                            <p>HTML</p>
-                            <p>CSS</p>
-                            <p>BOOTSTRAP</p>
-                            <p>PYTHON</p>
-                        </ul>
-                    </div>
-
-                    <div class="col-md-6 item text">
-                        <h3>Microblog</h3>
-                        <p>Desenvolvido por Júlio César Agripino</p>
-                    </div>
-
-                </div>
-                <p class="copyright">Microblog © 2022</p>
+      <footer>
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-6 col-md-3 item">
+              <h3>Tecnologias Usadas</h3>
+              <ul>
+                <p>HTML</p>
+                <p>CSS</p>
+                <p>BOOTSTRAP</p>
+                <p>PYTHON</p>
+              </ul>
             </div>
-        </footer>
-    </div>
-</body>
 
+            <div class="col-md-6 item text">
+              <h3>Microblog</h3>
+              <p>Desenvolvido por Júlio César Agripino</p>
+            </div>
+          </div>
+          <p class="copyright">Microblog © 2022</p>
+        </div>
+      </footer>
+    </div>
+  </body>
 </html>
