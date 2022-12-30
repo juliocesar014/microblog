@@ -35,3 +35,5 @@ Inicie o servidor - Run server
 ### Lembre de conectar ao MongoDB / Connect your MongoDB
 
 ## Demonstração
+![2022-12-30 09-46-38](https://user-images.githubusercontent.com/105388145/210071963-cce29a04-6c5e-424a-b0a3-d0497b28c4e5.gif)
+
